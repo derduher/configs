@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/pweygand/www/coloring_book_product/deploy'
+let g:netrw_dirhist_2='/home/pweygand/www/coloring_book_product/deploy/blah'
+let g:netrw_dirhist_3='/home/pweygand/www/joomla/administrator/components/com_slivers'
+let g:netrw_dirhist_4='/home/pweygand/www/joomla/administrator/components/com_slivers/css'
+let g:netrw_dirhist_5='/home/pweygand/www/joomla/administrator/components/com_slivers'
+let g:netrw_dirhist_6='/home/pweygand/www/joomla/administrator/components/com_slivers/js'
+let g:netrw_dirhist_7='/home/pweygand/www/joomla/administrator/components/com_slivers/views/setupgeneral/tmpl'
+let g:netrw_dirhist_8='/home/pweygand/www/joomla/administrator/components/com_slivers/views/setupvideos'
