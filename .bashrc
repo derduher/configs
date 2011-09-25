@@ -9,8 +9,6 @@
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
 
-# append to the history file, don't overwrite it
-shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
@@ -111,6 +109,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -137,5 +140,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# append to the history file, don't overwrite it
 shopt -s histappend
+# append to the history file after each command
 PROMPT_COMMAND="history -a"

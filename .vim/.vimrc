@@ -29,7 +29,8 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 set list " show the tabs and line returns
 set listchars=tab:⇨\ ,trail:.,eol:¬
 
-colorscheme northland
+set t_Co=256 " full range of colors for vim
+colorscheme mustang
 set history=200
 set cursorline " highlights line the cursor is on.
 set enc=utf-8
