@@ -1,3 +1,6 @@
 [submodule "javascript.vim"]
-	path = javascript.vim
+	path = .vim/bundle/javascript.vim
 	url = https://github.com/serverhorror/javascript.vim.git
+[submodule "nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

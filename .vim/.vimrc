@@ -44,6 +44,7 @@ set listchars=tab:⇨\ ,trail:.,eol:¬
 " colors!!!
 set t_Co=256 " full range of colors for vim
 colorscheme mustang
+set background=dark
 
 
 " lots of remaps courtesy of https://github.com/8bitDesigner/Dotfiles/blob/master/.vimrc
