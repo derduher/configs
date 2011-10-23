@@ -1,0 +1,3 @@
+[submodule "javascript.vim"]
+	path = javascript.vim
+	url = https://github.com/serverhorror/javascript.vim.git
