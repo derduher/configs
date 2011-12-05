@@ -5,9 +5,9 @@ set number " show the line number
 "set rnu " relative line line numbers
 syntax enable " necessary for folding and syntax highlighting
 set spell " spell gooder
-set ts=2 " number of spaces that a tab in file counts for
-set sw=2
-set sts=2 " soft tab stop makes tabs appear to be 2 spaces
+set ts=3 " number of spaces that a tab in file counts for
+set sw=3
+set sts=3 " soft tab stop makes tabs appear to be 2 spaces
 set ai " auto indent
 set si " smart indent
 set spr " puts the new window to the right.
@@ -26,7 +26,7 @@ filetype plugin indent on " required for folding to work
 set foldenable
 set foldmethod=syntax
 set foldlevel=0 " 0 all folds closed
-set foldcolumn=3
+set foldcolumn=2
 let php_folding = 1
 let javaScript_fold = 1
 let javascript_fold = 1
@@ -39,11 +39,13 @@ call pathogen#helptags()
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 set list " show the tabs and line returns
-set listchars=tab:⇨\ ,trail:.,eol:¬
+set listchars=tab:\ \ ,trail:.,eol:¬
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
-colorscheme mustang
+colorscheme molokai
 set background=dark
 
 
@@ -54,8 +56,14 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Tab/window shortcuts courtesy Paul Sweeny
 map <leader>t :tabnew<CR>
-map <leader>] :tabn<CR>
-map <leader>[ :tabp<CR>
+"map <leader>] :tabn<CR>
+"map <leader>[ :tabp<CR>
+
+" Window navigation mappings
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
 
 " Switch between dark and light backgrounds
 nmap \ :call ToggleBG()<CR>
@@ -72,3 +80,6 @@ map <leader>p :set paste!<CR>
 
 " Because I can't type worth poo
 cmap W w
+
+" TODO: handle case with space after
+let @q="i'lwi'"

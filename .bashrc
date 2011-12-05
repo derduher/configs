@@ -116,7 +116,7 @@ else
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -144,3 +144,4 @@ fi
 shopt -s histappend
 # append to the history file after each command
 PROMPT_COMMAND="history -a"
+export EDITOR='vim'
