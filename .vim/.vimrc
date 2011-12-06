@@ -80,6 +80,8 @@ map <leader>p :set paste!<CR>
 
 " Because I can't type worth poo
 cmap W w
+cmap Q q
 
 " TODO: handle case with space after
 let @q="i'lwi'"
+let @w="f'xf'x"
