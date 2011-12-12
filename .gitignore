@@ -1,2 +1,4 @@
 
 .vim/bundle/.gitmodules
+
+.vim/bundle/vim-autoclose
