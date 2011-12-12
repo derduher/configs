@@ -5,9 +5,9 @@ set number " show the line number
 "set rnu " relative line line numbers
 syntax enable " necessary for folding and syntax highlighting
 set spell " spell gooder
-set ts=3 " number of spaces that a tab in file counts for
-set sw=3
-set sts=3 " soft tab stop makes tabs appear to be 2 spaces
+set ts=4 " number of spaces that a tab in file counts for
+set sw=4
+set sts=4 " soft tab stop makes tabs appear to be 2 spaces
 set ai " auto indent
 set si " smart indent
 set spr " puts the new window to the right.
@@ -34,14 +34,22 @@ let javascript_enable_domhtmlcss = 1
 
 call pathogen#infect()
 call pathogen#helptags()
+" call pathogen#helptags
+
+" Enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
+let g:syntastic_enable_highlighting = 1
+let g:syntastic_auto_loc_list=1
+
+
+let g:JSLintHighlightErrorLine = 1
 
 " list ctags
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 set list " show the tabs and line returns
 set listchars=tab:\ \ ,trail:.,eol:¬
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
@@ -56,8 +64,6 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Tab/window shortcuts courtesy Paul Sweeny
 map <leader>t :tabnew<CR>
-"map <leader>] :tabn<CR>
-"map <leader>[ :tabp<CR>
 
 " Window navigation mappings
 nmap <leader>h <C-w>h
@@ -85,3 +91,7 @@ cmap Q q
 " TODO: handle case with space after
 let @q="i'lwi'"
 let @w="f'xf'x"
+
+set noswapfile
+set nobackup
+set nowritebackup

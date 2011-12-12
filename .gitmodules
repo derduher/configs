@@ -4,3 +4,18 @@
 [submodule "nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/jshint"]
+	path = .vim/bundle/jshint
+	url = git://github.com/wookiehangover/jshint.vim.git
+[submodule "bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = git://github.com/ddollar/nerdcommenter.git
+[submodule "bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/autoclose"]
+	path = .vim/bundle/autoclose
+	url = git://github.com/Townk/vim-autoclose.git
