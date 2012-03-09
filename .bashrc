@@ -13,7 +13,7 @@ HISTCONTROL=ignoredups:ignorespace
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=200000
-
+PATH="$PATH:/var/lib/gems/1.8/bin"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
