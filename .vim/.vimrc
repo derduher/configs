@@ -48,8 +48,9 @@ set listchars=tab:\ \ ,trail:.,eol:¬
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
-colorscheme molokai
+"colorscheme molokai
 set background=dark
+colorscheme solarized
 
 
 " lots of remaps courtesy of https://github.com/8bitDesigner/Dotfiles/blob/master/.vimrc
@@ -80,7 +81,7 @@ endfunction
 map <leader>p :set paste!<CR>
 
 " Because I can't type worth poo
-"cmap W w this is great and all until you need capital W in a regex
+"cmap <leader>w w "this is great and all until you need capital W in a regex
 "cmap Q q
 
 " TODO: handle case with space after
