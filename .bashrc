@@ -13,7 +13,7 @@ HISTCONTROL=ignoredups:ignorespace
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 HISTFILESIZE=200000
-
+PATH="$PATH:/var/lib/gems/1.8/bin"
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -27,40 +27,40 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 b='\[\033['
 
-black="$b0;30m\]" # Black - Regular
-red="$b0;31m\]" # Red
-txtgrn="$b0;32m\]" # Green
-txtylw="$b0;33m\]" # Yellow
-txtblu="$b0;34m\]" # Blue
-txtpur="$b0;35m\]" # Purple
-txtcyn="$b0;36m\]" # Cyan
-txtwht="$b0;37m\]" # White
-bldblk="$b1;30m\]" # Black - Bold
-bldred="$b1;31m\]" # Red
-bldgrn="$b1;32m\]" # Green
-bldylw="$b1;33m\]" # Yellow
-bldblu="$b1;34m\]" # Blue
-bldpur="$b1;35m\]" # Purple
-bldcyn="$b1;36m\]" # Cyan
-bldwht="$b1;37m\]" # White
-unkblk="$b4;30m\]" # Black - Underline
-undred="$b4;31m\]" # Red
-undgrn="$b4;32m\]" # Green
-undylw="$b4;33m\]" # Yellow
-undblu="$b4;34m\]" # Blue
-undpur="$b4;35m\]" # Purple
-undcyn="$b4;36m\]" # Cyan
-undwht="$b4;37m\]" # White
-bakblk="$b40m\]"   # Black - Background
-bakred="$b41m\]"   # Red
-badgrn="$b42m\]"   # Green
-bakylw="$b43m\]"   # Yellow
-bakblu="$b44m\]"   # Blue
-bakpur="$b45m\]"   # Purple
-bakcyn="$b46m\]"   # Cyan
-bakwht="$b47m\]"   # White
-txtrst="$b0m\]"    # Text Reset
-
+black="${b}0;30m\]" # Black - Regular
+red="${b}0;31m\]" # Red
+txtgrn="${b}0;32m\]" # Green
+txtylw="${b}0;33m\]" # Yellow
+txtblu="${b}0;34m\]" # Blue
+txtpur="${b}0;35m\]" # Purple
+txtcyn="${b}0;36m\]" # Cyan
+txtwht="${b}0;37m\]" # White
+bldblk="${b}1;30m\]" # Black - Bold
+bldred="${b}1;31m\]" # Red
+bldgrn="${b}1;32m\]" # Green
+bldylw="${b}1;33m\]" # Yellow
+bldblu="${b}1;34m\]" # Blue
+bldpur="${b}1;35m\]" # Purple
+bldcyn="${b}1;36m\]" # Cyan
+bldwht="${b}1;37m\]" # White
+unkblk="${b}4;30m\]" # Black - Underline
+undred="${b}4;31m\]" # Red
+undgrn="${b}4;32m\]" # Green
+undylw="${b}4;33m\]" # Yellow
+undblu="${b}4;34m\]" # Blue
+undpur="${b}4;35m\]" # Purple
+undcyn="${b}4;36m\]" # Cyan
+undwht="${b}4;37m\]" # White
+bakblk="${b}40m\]"   # Black - Background
+bakred="${b}41m\]"   # Red
+badgrn="${b}42m\]"   # Green
+bakylw="${b}43m\]"   # Yellow
+bakblu="${b}44m\]"   # Blue
+bakpur="${b}45m\]"   # Purple
+bakcyn="${b}46m\]"   # Cyan
+bakwht="${b}47m\]"   # White
+txtrst="${b}0m\]"    # Text Reset
+smiley="\$([[ \$? -eq 0 ]] && echo \"${txtgrn}☺$txtrst\" || echo \"${red}☠$txtrst\")"
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -83,7 +83,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 color_prompt=yes
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}$bldgrn\u@\h$txtrst:$bldblu\w$txtrst\n$smiley "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
