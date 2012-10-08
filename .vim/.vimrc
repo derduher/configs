@@ -10,6 +10,8 @@ set sw=4
 set sts=4 " soft tab stop makes tabs appear to be 2 spaces
 set ai " auto indent
 set si " smart indent
+set smarttab " use spaces
+set expandtab 
 set spr " puts the new window to the right.
 set smartcase " overrides ignore case when you type a capital letter.
 set wildmode=list,longest
