@@ -27,7 +27,7 @@ filetype plugin indent on " required for folding to work
 " folding
 set foldenable
 set foldmethod=indent
-set foldlevel=1 " 0 all folds closed
+set foldlevel=5 " 0 all folds closed
 set foldcolumn=2
 "let php_folding = 1
 "let javaScript_fold = 1

@@ -114,11 +114,13 @@ if [ -e /usr/share/terminfo/x/xterm-256color ]; then
 else
         export TERM='xterm-color'
 fi
-
+export PATH=${PATH}:/Users/pweygand/Downloads/adt-bundle-mac/sdk/platform-tools:/Users/pweygand/Downloads/adt-bundle-mac/sdk/tools
 # some more ls aliases
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias grep='grep -nEI --color'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
