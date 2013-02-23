@@ -59,6 +59,7 @@ colorscheme solarized
 
 let mapleader = "," " leader mapping
 map <leader>n :NERDTreeToggle<CR>
+map <leader>s :Gstatus<CR>
 
 " Tab/window shortcuts courtesy Paul Sweeny
 map <leader>t :tabnew<CR>
