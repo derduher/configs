@@ -52,5 +52,6 @@
     "undef": true, // preventing typos
     "unused": false, // really needed for debugging
     "strict": false, //force ecma5
+    "white": false,
     "trailing": true
 }
