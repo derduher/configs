@@ -3,3 +3,9 @@
 	email = patrick.weygand@ubnt.com
 [credential]
 	helper = osxkeychain
+[color]
+    ui = true
+[merge]
+    log = true
+[push]
+    default = matching
