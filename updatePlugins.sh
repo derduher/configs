@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+git submodule init && git submodule update
+
 PLUGINS=.vim/bundle/*
 orig=$PWD
 
@@ -9,6 +12,3 @@ do
     git pull
     cd $orig
 done
-
-git submodule init && git submodule update
-
