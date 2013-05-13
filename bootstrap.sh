@@ -4,6 +4,20 @@ git pull origin master
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "updatePlugins.sh" --exclude "bootstrap.sh" --exclude "README.md" -av --no-perms . ~
 }
+# update vim submodules
+git submodule init && git submodule update
+
+PLUGINS=.vim/bundle/*
+orig=$PWD
+
+for f in $PLUGINS
+do
+    cd $f
+    git checkout master
+    git pull
+    cd $orig
+done
+
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
