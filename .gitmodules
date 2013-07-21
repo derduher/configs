@@ -28,3 +28,9 @@
 [submodule ".vim/bundle/vim-abolish"]
 	path = .vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish
+[submodule ".vim/bundle/vim-hardtime"]
+	path = .vim/bundle/vim-hardtime
+	url = git@github.com:takac/vim-hardtime.git
+[submodule ".vim/bundle/neocomplete"]
+	path = .vim/bundle/neocomplete
+	url = git@github.com:Shougo/neocomplete.vim.git
