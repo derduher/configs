@@ -24,8 +24,6 @@ let g:hardtime_default_on = 1
 
 filetype plugin indent on " required for folding to work
 let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
@@ -48,6 +46,7 @@ call pathogen#infect()
 " Enable syntastic syntax checking
 let g:syntastic_quiet_warnings=0
 let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
+let g:syntastic_html_checkers=['w3']
 
 
 "let g:JSLintHighlightErrorLine = 1
