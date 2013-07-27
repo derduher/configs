@@ -21,6 +21,7 @@ set cursorline " highlights line the cursor is on.
 set enc=utf-8
 set showmatch " helps detect unbalanced brackets?
 let g:hardtime_default_on = 1
+set nowrap
 
 filetype plugin indent on " required for folding to work
 let g:acp_enableAtStartup = 0
@@ -101,5 +102,15 @@ let @w="f'xf'x"
 set noswapfile
 set nobackup
 set nowritebackup
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
