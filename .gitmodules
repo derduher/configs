@@ -31,3 +31,9 @@
 [submodule ".vim/bundle/vim-filetype-xdebug"]
 	path = .vim/bundle/vim-filetype-xdebug
 	url = git://github.com/dominics/vim-filetype-xdebug.git
+[submodule ".vim/bundle/vim-hardtime"]
+	path = .vim/bundle/vim-hardtime
+	url = git@github.com:takac/vim-hardtime.git
+[submodule ".vim/bundle/neocomplete"]
+	path = .vim/bundle/neocomplete
+	url = git@github.com:Shougo/neocomplete.vim.git
