@@ -60,11 +60,11 @@ colorscheme solarized
 " lots of remaps courtesy of https://github.com/8bitDesigner/Dotfiles/blob/master/.vimrc
 
 let mapleader = "," " leader mapping
-map <leader>n :NERDTreeToggle<CR>
-map <leader>s :Gstatus<CR>
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>s :Gstatus<CR>
 
 " Tab/window shortcuts courtesy Paul Sweeny
-map <leader>t :tabnew<CR>
+nmap <leader>t :tabnew<CR>
 "map <leader>H :HardTimeToggle<CR>
 
 " Window navigation mappings
@@ -72,6 +72,12 @@ nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
+
+" esc is too far
+inoremap ,;; <Esc>
+nnoremap <leader>;; <Esc>
+vnoremap <leader>;; <Esc>
+nmap <leader>q :wq<CR>
 
 " Switch between dark and light backgrounds
 nmap \ :call ToggleBG()<CR>
@@ -104,7 +110,7 @@ let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
+"let g:neocomplete#sources#syntax#min_keyword_length = 1
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
@@ -119,25 +125,27 @@ if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+let g:neocomplete#enable_auto_select = 1
 
 " Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-j>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 function! s:my_cr_function()
-  return neocomplete#smart_close_popup() . "\<CR>"
+  "return neocomplete#smart_close_popup() . "\<CR>"
   " For no inserting <CR> key.
-  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunctio
 
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
+"inoremap <expr><c-j>  neocomplete#close_popup()
+inoremap <expr><c-i>  neocomplete#close_popup()<c-[>
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 "
 " Enable omni completion.
