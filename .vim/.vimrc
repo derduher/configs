@@ -44,6 +44,8 @@ let g:syntastic_quiet_warnings=0
 let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
 let g:syntastic_html_checkers=['w3']
 
+let g:javascript_conceal=1
+
 
 "let g:JSLintHighlightErrorLine = 1
 
