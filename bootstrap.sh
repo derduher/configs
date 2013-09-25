@@ -18,6 +18,7 @@ do
     git pull &
     cd $orig
 done
+wait
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
