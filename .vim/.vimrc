@@ -7,7 +7,9 @@ set smartcase " overrides ignore case when you type a capital letter.
 
 set number " show the line number
 set rnu " relative line line numbers
+
 syntax enable " necessary for folding and syntax highlighting
+
 set spell " spell gooder
 
 set ts=4 " width of tab
@@ -19,7 +21,7 @@ set smarttab " use spaces
 set expandtab 
 set backspace=indent,eol,start
 
-set spr " puts the new window to the right.
+
 set wildmode=list,longest
 set ml
 set history=200
@@ -27,7 +29,6 @@ set cursorline " highlights line the cursor is on.
 set title "  show filename in window
 set enc=utf-8
 set showmatch " helps detect unbalanced brackets?
-"let g:hardtime_default_on = 1
 
 " Default shell and shell syntax
 set shell=bash
@@ -46,8 +47,6 @@ filetype plugin indent on " required for folding to work
 "let javascript_enable_domhtmlcss = 1
 
 call pathogen#infect()
-"call pathogen#helptags()
-" call pathogen#helptags
 
 " Enable syntastic syntax checking
 let g:syntastic_quiet_warnings=0
@@ -57,15 +56,12 @@ let g:syntastic_html_checkers=['w3']
 let g:javascript_conceal=1
 
 
-"let g:JSLintHighlightErrorLine = 1
-
 set list " show the tabs and line returns
 set listchars=tab:\ \ ,trail:·,eol:¬,nbsp:_,extends:❯,precedes:❮
 set showbreak=↪\  " Character to precede line wraps
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
-"colorscheme molokai
 set background=dark
 colorscheme solarized
 
@@ -78,8 +74,8 @@ nmap <leader>s :Gstatus<CR>
 
 " Tab/window shortcuts courtesy Paul Sweeny
 nmap <leader>t :tabnew<CR>
-"map <leader>H :HardTimeToggle<CR>
-"
+
+set spr " puts the new window to the right.
 set splitbelow splitright
 " Window navigation mappings
 nmap <leader>h <C-w>h
@@ -89,7 +85,6 @@ nmap <leader>l <C-w>l
 
 " esc is too far
 inoremap jk <Esc>
-nmap <leader>q :wq<CR>
 
 " Switch between dark and light backgrounds
 nmap \ :call ToggleBG()<CR>
@@ -112,6 +107,7 @@ map <leader>p :set paste!<CR>
 let @q="i'lwi'"
 let @w="f'xf'x"
 
+" Disables backups - we have version control
 set noswapfile
 set nobackup
 set nowritebackup
@@ -196,6 +192,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
+" Performance
 set ttyfast
 " Update syntax highlighting for more lines increased scrolling performance
 syntax sync minlines=256
