@@ -1,27 +1,37 @@
 set nocompatible
+
+set hlsearch " highlight searches
 set incsearch " incremental search start showing results before enter is pressed
 set ignorecase " search case insensitively
+set smartcase " overrides ignore case when you type a capital letter.
+
 set number " show the line number
 set rnu " relative line line numbers
 syntax enable " necessary for folding and syntax highlighting
 set spell " spell gooder
-set ts=4 " number of spaces that a tab in file counts for
-set sw=4
+
+set ts=4 " width of tab
+set sw=4 " auto indent width
 set sts=4 " soft tab stop makes tabs appear to be 2 spaces
 set ai " auto indent
 set si " smart indent
 set smarttab " use spaces
 set expandtab 
+set backspace=indent,eol,start
+
 set spr " puts the new window to the right.
-set smartcase " overrides ignore case when you type a capital letter.
 set wildmode=list,longest
 set ml
 set history=200
 set cursorline " highlights line the cursor is on.
+set title "  show filename in window
 set enc=utf-8
 set showmatch " helps detect unbalanced brackets?
 "let g:hardtime_default_on = 1
-set nowrap
+
+" Default shell and shell syntax
+set shell=bash
+let g:is_bash=1
 
 filetype plugin indent on " required for folding to work
 
@@ -50,7 +60,8 @@ let g:javascript_conceal=1
 "let g:JSLintHighlightErrorLine = 1
 
 set list " show the tabs and line returns
-set listchars=tab:\ \ ,trail:·,eol:¬
+set listchars=tab:\ \ ,trail:·,eol:¬,nbsp:_,extends:❯,precedes:❮
+set showbreak=↪\  " Character to precede line wraps
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
@@ -68,7 +79,8 @@ nmap <leader>s :Gstatus<CR>
 " Tab/window shortcuts courtesy Paul Sweeny
 nmap <leader>t :tabnew<CR>
 "map <leader>H :HardTimeToggle<CR>
-
+"
+set splitbelow splitright
 " Window navigation mappings
 nmap <leader>h <C-w>h
 nmap <leader>j <C-w>j
@@ -76,9 +88,7 @@ nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
 
 " esc is too far
-inoremap ,;; <Esc>
-nnoremap <leader>;; <Esc>
-vnoremap <leader>;; <Esc>
+inoremap jk <Esc>
 nmap <leader>q :wq<CR>
 
 " Switch between dark and light backgrounds
@@ -185,3 +195,9 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
+set ttyfast
+" Update syntax highlighting for more lines increased scrolling performance
+syntax sync minlines=256
+" Don't syntax highlight long lines
+set synmaxcol=256
