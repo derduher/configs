@@ -18,7 +18,7 @@ set sts=4 " soft tab stop makes tabs appear to be 2 spaces
 set ai " auto indent
 set si " smart indent
 set smarttab " use spaces
-set expandtab 
+set expandtab
 set backspace=indent,eol,start
 
 
@@ -51,7 +51,8 @@ call pathogen#infect()
 " Enable syntastic syntax checking
 let g:syntastic_quiet_warnings=0
 let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
-let g:syntastic_html_checkers=['w3']
+" Nothing really does html that well
+let g:syntastic_disabled_filetypes=['html']
 
 let g:javascript_conceal=1
 
@@ -85,6 +86,7 @@ nmap <leader>l <C-w>l
 
 " esc is too far
 inoremap jk <Esc>
+inoremap kj <Esc>
 
 " Switch between dark and light backgrounds
 nmap \ :call ToggleBG()<CR>
@@ -98,14 +100,6 @@ endfunction
 
 " I paste frequently
 map <leader>p :set paste!<CR>
-
-" Because I can't type worth poo
-"cmap <leader>w w "this is great and all until you need capital W in a regex
-"cmap Q q
-
-" TODO: handle case with space after
-let @q="i'lwi'"
-let @w="f'xf'x"
 
 " Disables backups - we have version control
 set noswapfile
