@@ -49,12 +49,12 @@ filetype plugin indent on " required for folding to work
 call pathogen#infect()
 
 " Enable syntastic syntax checking
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
 " Nothing really does html that well
-let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_ignore_files=['.html$', '.hbs$']
 
-let g:javascript_conceal=1
+"let g:javascript_conceal=1
 
 
 set list " show the tabs and line returns
