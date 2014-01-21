@@ -1,4 +1,0 @@
-function ssologin() {
-    curl "https://localhost:8843/api/sso/1.0.0/login" -kis -H "Content-Type: application/json" -d '{"user":"patrick.weygand+2@gmail.com","password":"password"}' -X POST | grep UBIC_AUTH
-    
-}

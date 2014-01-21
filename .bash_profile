@@ -13,8 +13,6 @@ unset file
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-export PATH=${PATH}:/Users/pweygand/Downloads/adt-bundle-mac/sdk/platform-tools:/Users/pweygand/Downloads/adt-bundle-mac/sdk/tools
-
 [ -f /etc/bash_completion ] && source /etc/bash_completion
 
 # append to the history file, don't overwrite it
@@ -35,6 +33,8 @@ done
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
-# append to the history file after each command
-PROMPT_COMMAND="history -a"
+
+# If possible, add tab completion for many more commands
+[ -f /etc/bash_completion ] && source /etc/bash_completion
+
 eval "$(rbenv init -)"
