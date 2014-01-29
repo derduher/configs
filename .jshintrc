@@ -1,34 +1,12 @@
 {
-    //unique to node package
-    "globals": {
-        "_": true,
-        "EDGE": true,
-        "Backbone": true,
-        "Modernizr": true,
-        "jasmine": false,
-        "spyOn": false,
-        "it": false,
         "devel": true,
-        "browser": true,
-        "describe": false,
-        "expect": false,
-        "beforeEach": false,
-        "waits": false,
-        "waitsFor": false,
-        "runs": false,
-        "jquery": true
-    },
-
-        "devel": true,
-        "browser": true,
-        "jquery": true,
 
 
 //relaxing
-    "boss" : false, //prohibit assignments where expressions are expected
-    "debug": false, //suppress debugger statements
+    "boss" : true, //prohibit assignments where expressions are expected
+    "debug": true, //suppress debugger statements
     "eqnull": true, //suppress warnings about comparisons with null/undef
-    "es5" : false,
+    "es5" : true,
     "evil": false, //evals are bad don't supress 
     "laxbreak": false,
     "laxcomma": true, //allow comma first style

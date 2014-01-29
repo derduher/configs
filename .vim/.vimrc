@@ -6,7 +6,7 @@ set ignorecase " search case insensitively
 set smartcase " overrides ignore case when you type a capital letter.
 
 set number " show the line number
-set rnu " relative line line numbers
+"set rnu " relative line line numbers
 
 syntax enable " necessary for folding and syntax highlighting
 
