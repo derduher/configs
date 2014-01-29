@@ -12,9 +12,9 @@ syntax enable " necessary for folding and syntax highlighting
 
 set spell " spell gooder
 
-set ts=4 " width of tab
-set sw=4 " auto indent width
-set sts=4 " soft tab stop makes tabs appear to be 2 spaces
+set ts=2 " width of tab
+set sw=2 " auto indent width
+set sts=2 " soft tab stop makes tabs appear to be 2 spaces
 set ai " auto indent
 set si " smart indent
 set smarttab " use spaces
@@ -86,6 +86,10 @@ nmap <leader>l <C-w>l
 " esc is too far
 inoremap jk <Esc>
 inoremap kj <Esc>
+nnoremap <leader>== :Tabularize /=<CR>
+vnoremap <leader>== :Tabularize /=<CR>
+nnoremap <leader>=: :Tabularize /:/r0c1l0<CR>
+vnoremap <leader>=: :Tabularize /:/r0c1l0<CR>
 
 " Switch between dark and light backgrounds
 nmap \ :call ToggleBG()<CR>
@@ -128,27 +132,6 @@ endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 let g:neocomplete#enable_auto_select = 1
 
-" Plugin key-mappings.
-inoremap <expr><C-j>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  "return neocomplete#smart_close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunctio
-
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><c-j>  neocomplete#close_popup()
-inoremap <expr><c-i>  neocomplete#close_popup()<c-[>
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -168,26 +151,11 @@ imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
 " Performance
 set ttyfast
 " Update syntax highlighting for more lines increased scrolling performance
 syntax sync minlines=256
 " Don't syntax highlight long lines
 set synmaxcol=256
+
+
