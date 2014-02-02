@@ -86,10 +86,10 @@ nmap <leader>l <C-w>l
 " esc is too far
 inoremap jk <Esc>
 inoremap kj <Esc>
-nnoremap <leader>== :Tabularize /=<CR>
-vnoremap <leader>== :Tabularize /=<CR>
-nnoremap <leader>=: :Tabularize /:/r0c1l0<CR>
-vnoremap <leader>=: :Tabularize /:/r0c1l0<CR>
+nnoremap <leader>= :Tabularize /=<CR>
+vnoremap <leader>= :Tabularize /=<CR>
+nnoremap <leader>; :Tabularize /^[^:]*\zs:/l0c1l0<CR>
+vnoremap <leader>; :Tabularize /^[^:]*\zs:/l0c1l0<CR>
 
 " Switch between dark and light backgrounds
 nmap \ :call ToggleBG()<CR>
@@ -132,12 +132,39 @@ endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 let g:neocomplete#enable_auto_select = 1
 
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  "return neocomplete#smart_close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><c-j>  neocomplete#close_popup()
+inoremap <expr><c-i>  neocomplete#close_popup()<c-[>
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"" Tell Neosnippet about the other snippets
+
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'"
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
