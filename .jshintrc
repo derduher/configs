@@ -1,35 +1,18 @@
 {
-        "devel": true,
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "freeze": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "nonew": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": "vars",
+  "trailing": true,
 
-
-//relaxing
-    "boss" : true, //prohibit assignments where expressions are expected
-    "debug": true, //suppress debugger statements
-    "eqnull": true, //suppress warnings about comparisons with null/undef
-    "es5" : true,
-    "evil": false, //evals are bad don't supress 
-    "laxbreak": false,
-    "laxcomma": true, //allow comma first style
-    "sub": true, //suppress warning about using [ ]when .prop is just as good
-
-    //enforcing
-    "bitwise": true,
-    "curly": false, //ideally true
-    "eqeqeq": false, //ideally true
-    "forin": false,
-    "immed": true, // immediate function invocation
-    "indent": 4,
-    "latedef": true, //prohibit late definition
-    "maxparams": 5,
-    "newcap": true, // have to cap classes
-    "noarg": true,
-    "noempty": false,
-    "nonew": true, // if you aren't assigning it why call it.
-    "plusplus": false, // plus plus is ok keep it
-    "regexp": true, //prohibits unsafe dot
-    "undef": true, // preventing typos
-    "unused": false, // really needed for debugging
-    "strict": false, //force ecma5
-    "white": false,
-    "trailing": true
+  "debug": true,
+  "lastsemic": true
 }
