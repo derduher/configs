@@ -6,7 +6,6 @@
     "boss" : true, //prohibit assignments where expressions are expected
     "debug": true, //suppress debugger statements
     "eqnull": true, //suppress warnings about comparisons with null/undef
-    "es5" : true,
     "evil": false, //evals are bad don't supress 
     "laxbreak": false,
     "laxcomma": true, //allow comma first style
@@ -18,7 +17,7 @@
     "eqeqeq": false, //ideally true
     "forin": false,
     "immed": true, // immediate function invocation
-    "indent": 4,
+    "indent": 2,
     "latedef": true, //prohibit late definition
     "maxparams": 5,
     "newcap": true, // have to cap classes

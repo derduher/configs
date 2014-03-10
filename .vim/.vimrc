@@ -26,6 +26,7 @@ set wildmode=list,longest
 set ml
 set history=200
 set cursorline " highlights line the cursor is on.
+set cc=80 " Highlights 80th col.
 set title "  show filename in window
 set enc=utf-8
 set showmatch " helps detect unbalanced brackets?

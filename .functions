@@ -1,0 +1,22 @@
+sso() {
+  cookie_jar="$1";
+  endpoint="https://dev-build.ubnt.com/api/sso/v1/$2";
+  method="$3";
+  data="$4";
+  origin="$5";
+  curl -ik \
+  -b "$cookie_jar" -c "$cookie_jar" \
+  -H 'content-type: application/json' \
+  "$endpoint" \
+  -X "$method" \
+  -d "$data" \
+  -H "Origin: https://$origin";
+}
+
+sso_u1() {
+    sso "/tmp/cookie_jar_u1" "$1" "$2" "$3" "$4"
+}
+
+sso_u2() {
+    sso "/tmp/cookie_jar_u2" "$1" "$2" "$3" "$4"
+}
