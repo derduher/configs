@@ -1,6 +1,6 @@
 sso() {
   cookie_jar="$1";
-  endpoint="https://dev-build.ubnt.com/api/sso/v1/$2";
+  endpoint="https://$6.ubnt.com/api/sso/v1/$2";
   method="$3";
   data="$4";
   origin="$5";
@@ -14,9 +14,15 @@ sso() {
 }
 
 sso_u1() {
-    sso "/tmp/cookie_jar_u1" "$1" "$2" "$3" "$4"
+    sso "/tmp/cookie_jar_u1" "$1" "$2" "$3" account.ubnt.com dev-build
 }
 
-sso_u2() {
-    sso "/tmp/cookie_jar_u2" "$1" "$2" "$3" "$4"
+sso_u1_prod() {
+    sso "/tmp/cookie_jar_u1" "$1" "$2" "$3" account.ubnt.com api
+}
+
+#just log me in
+sso_login() {
+  read -s -p "enter password: " password
+  sso_u1 login POST '{"user":"'$1'","password":"'"$password"'"}'
 }
