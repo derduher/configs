@@ -1,57 +1,12 @@
-[submodule "nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
-	url = git://github.com/pangloss/vim-javascript.git
-[submodule "bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
-	url = git://github.com/ddollar/nerdcommenter.git
-[submodule "bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/vim-autoclose"]
-	path = .vim/bundle/vim-autoclose
-	url = git://github.com/Townk/vim-autoclose.git
-[submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/vim-repeat"]
-	path = .vim/bundle/vim-repeat
-	url = git://github.com/tpope/vim-repeat.git
-[submodule ".vim/bundle/vim-abolish"]
-	path = .vim/bundle/vim-abolish
-	url = git://github.com/tpope/vim-abolish
-[submodule ".vim/bundle/vim-filetype-xdebug"]
-	path = .vim/bundle/vim-filetype-xdebug
-	url = git://github.com/dominics/vim-filetype-xdebug.git
 [submodule ".vim/bundle/vim-hardtime"]
 	path = .vim/bundle/vim-hardtime
 	url = git@github.com:takac/vim-hardtime.git
-[submodule ".vim/bundle/neocomplete"]
-	path = .vim/bundle/neocomplete
-	url = git@github.com:Shougo/neocomplete.vim.git
-[submodule ".vim/bundle/neosnippet.vim"]
-	path = .vim/bundle/neosnippet.vim
-	url = git@github.com:Shougo/neosnippet.vim.git
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
-[submodule ".vim/bundle/vim-editorconfig"]
-	path = .vim/bundle/vim-editorconfig
-	url = git@github.com:editorconfig/editorconfig-vim.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script
 [submodule ".vim/bundle/vim-mustache-handlebars"]
 	path = .vim/bundle/vim-mustache-handlebars
 	url = git://github.com/mustache/vim-mustache-handlebars.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/Vundle.vim"]
+	path = .vim/bundle/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim.git

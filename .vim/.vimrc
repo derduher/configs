@@ -1,4 +1,57 @@
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'scrooloose/nerdtree'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ddollar/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'Townk/vim-autoclose'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-abolish'
+"Plugin 'dominics/vim-filetype-xdebug'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neosnippet'
+"Plugin 'honza/vim-snippets'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'godlygeek/tabular'
+
+
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
+
 
 set hlsearch " highlight searches
 set incsearch " incremental search start showing results before enter is pressed
@@ -35,8 +88,6 @@ set showmatch " helps detect unbalanced brackets?
 set shell=bash
 let g:is_bash=1
 
-filetype plugin indent on " required for folding to work
-
 " folding
 "set foldenable
 "set foldmethod=indent
@@ -47,7 +98,7 @@ filetype plugin indent on " required for folding to work
 "let javascript_fold = 1
 "let javascript_enable_domhtmlcss = 1
 
-call pathogen#infect()
+"call pathogen#infect()
 
 " Enable syntastic syntax checking
 let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
@@ -187,4 +238,5 @@ syntax sync minlines=256
 " Don't syntax highlight long lines
 set synmaxcol=256
 
+" break up line on first space
 let @b='^f s'
