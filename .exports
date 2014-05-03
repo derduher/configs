@@ -22,3 +22,5 @@ export MANPAGER="less -X"
 export GREP_OPTIONS="--color=auto"
 export PATH="/usr/local/Cellar/vim/HEAD/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 export NODE_ENV=development
+
+export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox

@@ -63,8 +63,9 @@ set showbreak=↪\  " Character to precede line wraps
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
-set background=dark
+set background=light
 colorscheme solarized
+
 
 
 " lots of remaps courtesy of https://github.com/8bitDesigner/Dotfiles/blob/master/.vimrc
@@ -186,4 +187,4 @@ syntax sync minlines=256
 " Don't syntax highlight long lines
 set synmaxcol=256
 
-
+let @b='^f s'
