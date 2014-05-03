@@ -1,25 +1,24 @@
 #!/usr/bin/env bash
 cd "$(dirname "${BASH_SOURCE}")"
-git pull origin master
+
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "updatePlugins.sh" --exclude "bootstrap.sh" --exclude "README.md" -av --no-perms . ~
-    source ~/.bash_profile
-}
-# update vim submodules
-git submodule init && git submodule update
 
-PLUGINS=.vim/bundle/*
-orig=$PWD
+  orig=$PWD
 
-for f in $PLUGINS
-do
-    cd $f
-    git checkout master
-    git pull &
+  if [ ! -d ~/.vim/bundle/Vundle.vim ]
+  then
+    cd ~/
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim -u ~/.vim/bundles.vim +PluginInstall +qall
     cd $orig
-done
-wait
+  fi
 
+  source ~/.bash_profile
+}
+
+
+git pull origin master
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
 else
