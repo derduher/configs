@@ -1,4 +1,4 @@
-source .vim/bundles.vim
+source ~/.vim/bundles.vim
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
