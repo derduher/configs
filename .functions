@@ -14,7 +14,7 @@ sso() {
 }
 
 sso_u1() {
-    sso "/tmp/cookie_jar_u1" "$1" "$2" "$3" account.ubnt.com dev-build
+    sso "/tmp/cookie_jar_u1" "$1" "$2" "$3" staging-account.ubnt.com dev-build
 }
 
 sso_u1_prod() {
@@ -25,4 +25,16 @@ sso_u1_prod() {
 sso_login() {
   read -s -p "enter password: " password
   sso_u1 login POST '{"user":"'$1'","password":"'"$password"'"}'
+}
+
+org() {
+  method="$1"
+  path="$2"
+  data="$3"
+  origin="${4:-staging-account.ubnt.com}"
+  curl -ivk -b /tmp/cookie_jar_u1 -c /tmp/cookie_jar_u1 \
+  -H 'content-type: application/json' \
+  -H "Origin: https://$origin" -X $method \
+  -d "$data" \
+  "https://billing-v2-stage.ec2-us-east-1.us1.svc.ubnt.com:9091/api/organizations/v1/$path"
 }

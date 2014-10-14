@@ -11,6 +11,8 @@ function doIt() {
     cd ~/
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim -u ~/.vim/bundles.vim +PluginInstall +qall
+    cd ~/.vim/bundle/vimproc.vim
+    make
     cd $orig
   fi
 

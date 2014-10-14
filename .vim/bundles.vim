@@ -30,7 +30,9 @@ Plugin 'Shougo/neosnippet'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'godlygeek/tabular'
-
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'digitaltoad/vim-jade'
 
 
 

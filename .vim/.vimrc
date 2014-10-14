@@ -101,7 +101,7 @@ nmap <leader>l <C-w>l
 
 " esc is too far
 inoremap jk <Esc>
-inoremap kj <Esc>
+"inoremap kj <Esc>
 nnoremap <leader>= :Tabularize /=<CR>
 vnoremap <leader>= :Tabularize /=<CR>
 nnoremap <leader>; :Tabularize /^[^:]*\zs:/l0c1l0<CR>
@@ -203,3 +203,8 @@ set synmaxcol=256
 
 " break up line on first space
 let @b='^f s'
+
+" Unite
+nnoremap <leader>b :<C-u>Unite buffer -no-split<CR>
+nnoremap <leader>r :<C-u>Unite buffer file_rec/git:--cached:--others:--exclude-standard -no-split -start-insert file/new<CR>
+nnoremap <leader>R :<C-u>Unite buffer file/new file_rec -no-split -input=!node_modules\ !lib -start-insert<CR>
