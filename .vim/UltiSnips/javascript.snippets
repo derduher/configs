@@ -1,0 +1,39 @@
+snippet fun "function"
+/**
+ * $2
+ * @param {$4} $3 - $5
+ */
+$1 = function $1 ($3) {
+  $5
+};
+endsnippet
+
+snippet funa "function anon"
+function ($1) {
+  $2
+}
+endsnippet
+
+snippet bef "beforeEach" b
+beforeEach(function () {
+	$0
+});
+endsnippet
+
+snippet it "it" b
+it('$1', function () {
+	$0
+});
+endsnippet
+
+snippet describe "describe" b
+describe('$1', function () {
+  ${1:beforeEach(function () {
+    $2
+  });
+
+}  it('$3', function () {
+    $0
+  });
+});
+endsnippet

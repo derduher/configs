@@ -125,74 +125,6 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-"let g:neocomplete#sources#syntax#min_keyword_length = 1
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
-
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-let g:neocomplete#enable_auto_select = 1
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  "return neocomplete#smart_close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><c-j>  neocomplete#close_popup()
-inoremap <expr><c-i>  neocomplete#close_popup()<c-[>
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"" Tell Neosnippet about the other snippets
-
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'"
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-
-" Snippets
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " Performance
 set ttyfast
@@ -205,6 +137,14 @@ set synmaxcol=256
 let @b='^f s'
 
 " Unite
-nnoremap <leader>b :<C-u>Unite buffer -no-split<CR>
+nnoremap <leader>b :<C-u>Unite buffer -no-split -start-insert<CR>
 nnoremap <leader>r :<C-u>Unite buffer file_rec/git:--cached:--others:--exclude-standard -no-split -start-insert file/new<CR>
-nnoremap <leader>R :<C-u>Unite buffer file/new file_rec -no-split -input=!node_modules\ !lib -start-insert<CR>
+"nnoremap <leader>r :<C-u>Unite buffer file_rec -no-split -input=!tmp\ !coverage\ !node_modules\ !lib\  -start-insert file/new<CR>
+nnoremap <leader>R :<C-u>Unite buffer file/new file_rec -no-split -input=!tmp\ !coverage\ !node_modules\ !lib\  -start-insert<CR>
+
+" Utilisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<leader>f"
+let g:UltiSnipsJumpBackwardTrigger="<leader>F"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

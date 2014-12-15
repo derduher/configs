@@ -2,6 +2,7 @@
 cd "$(dirname "${BASH_SOURCE}")"
 
 function doIt() {
+	rsync --exclude ".git/" --exclude ".DS_Store" -av --no-perms ~/.vim/UltiSnips ./.vim/
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "updatePlugins.sh" --exclude "bootstrap.sh" --exclude "README.md" -av --no-perms . ~
 
   orig=$PWD
@@ -14,6 +15,8 @@ function doIt() {
     cd ~/.vim/bundle/vimproc.vim
     make
     cd $orig
+  else
+    vim -u ~/.vim/bundles.vim +PluginInstall +qall
   fi
 
   source ~/.bash_profile
