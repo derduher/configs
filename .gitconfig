@@ -1,11 +1,18 @@
 [user]
-	name = Patrick Weygand
-	email = patrick.weygand@ubnt.com
+  name = Patrick Weygand
+  email = patrick.weygand@gmail.com
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [color]
-    ui = true
+  ui = true
 [merge]
-    log = true
+  log = true
 [push]
-    default = matching
+  default = upstream
+[rerere]
+  enabled = 1
+[alias]
+  co = checkout
+  ghrepo = !git remote show origin -n | grep 'Fetch' | perl -pe 's/.*git\\@github.com://g' | perl -pe 's/.git$//'
+  url = !echo http://github.com/$(git ghrepo)
+  pr  = !echo $(git url)/compare/master...$(git current)

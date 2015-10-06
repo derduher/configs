@@ -36,6 +36,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-markdown'
+Plugin 'kchmck/vim-coffee-script'
 
 
 
