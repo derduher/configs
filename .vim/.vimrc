@@ -67,6 +67,7 @@ let g:is_bash=1
 let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
 " Nothing really does html that well
 let g:syntastic_ignore_files=['.html$', '.hbs$']
+let g:syntastic_javascript_checkers = ['standard']
 
 "let g:javascript_conceal=1
 
