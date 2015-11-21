@@ -150,3 +150,4 @@ let g:UltiSnipsJumpBackwardTrigger="<leader>F"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 au BufRead,BufNewFile *.es6 set ft=javascript
+au BufRead,BufNewFile *.nghtml set ft=html
