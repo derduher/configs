@@ -4,7 +4,7 @@ export PATH="$HOME/bin:$PATH"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,bash_aliases,functions,extra,profile}; do
+for file in ~/.{path,bash_prompt,exports,bash_aliases,functions,profile,bower_complete,git-completion.bash,nvm/nvm.sh,extra}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -39,3 +39,5 @@ done
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
+
+ulimit -n 4096
