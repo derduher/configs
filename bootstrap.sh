@@ -16,7 +16,7 @@ function doIt() {
     make
     cd $orig
   else
-    vim -u ~/.vim/bundles.vim +PluginInstall +qall
+    vim -u ~/.vim/bundles.vim +PluginUpdate +qall
   fi
 
   source ~/.bash_profile
