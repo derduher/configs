@@ -11,7 +11,8 @@
   pr  = !echo $(git url)/compare/master...$(git current)
   # Remove branches that have already been merged with master
   # a.k.a. ‘delete merged’
-  dm = "!git branch --merged | grep -v master | grep -v '\\*' | xargs -n 1 git branch -d"
+  dm = "!git branch --merged | grep -v master | grep -v '\\*'| cut -d' ' -f 3 | xargs -n 1 git branch -d"
+  dmd = "!git branch --merged | grep -v master | grep -v '\\*'| cut -d' ' -f 3"
 
 [apply]
 
