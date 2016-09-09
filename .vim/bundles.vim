@@ -14,7 +14,6 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'scrooloose/nerdtree'
-Plugin 'pangloss/vim-javascript'
 Plugin 'ddollar/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'Townk/vim-autoclose'
@@ -24,6 +23,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/yajs.vim'
+Plugin 'isRuslan/vim-es6'
+Plugin 'ternjs/tern_for_vim' "Autocomplete"
+
 "Plugin 'dominics/vim-filetype-xdebug'
 "Plugin 'Shougo/neocomplete'
 "Plugin 'Shougo/neosnippet'
@@ -36,8 +42,6 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-markdown'
-Plugin 'kchmck/vim-coffee-script'
-
 
 
 " All of your Plugins must be added before the following line
