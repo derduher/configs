@@ -151,3 +151,7 @@ let g:UltiSnipsJumpBackwardTrigger="<leader>F"
 let g:UltiSnipsEditSplit="vertical"
 au BufRead,BufNewFile *.es6 set ft=javascript
 au BufRead,BufNewFile *.nghtml set ft=html
+
+" Nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
