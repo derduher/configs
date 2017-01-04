@@ -29,6 +29,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/yajs.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'ternjs/tern_for_vim' "Autocomplete"
+Plugin 'othree/html5.vim'
 
 "Plugin 'dominics/vim-filetype-xdebug'
 "Plugin 'Shougo/neocomplete'
