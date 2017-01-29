@@ -16,4 +16,3 @@ alias gpu='git push -u origin `git rev-parse --abbrev-ref HEAD`'
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-

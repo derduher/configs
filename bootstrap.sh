@@ -7,17 +7,7 @@ function doIt() {
 
   orig=$PWD
 
-  if [ ! -d ~/.vim/bundle/Vundle.vim ]
-  then
-    cd ~/
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    vim -u ~/.vim/bundles.vim +PluginInstall +qall
-    cd ~/.vim/bundle/vimproc.vim
-    make
-    cd $orig
-  else
-    vim -u ~/.vim/bundles.vim +PluginUpdate +qall
-  fi
+  vim -u ~/.vim/bundles.vim +PlugUpdate +qall
 
   source ~/.bash_profile
 }
