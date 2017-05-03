@@ -11,6 +11,8 @@ brew dkv
 tap homebrew/completions
 
 tap homebrew/core
+brew autoconf
+brew automake
 brew aws-elasticbeanstalk
 brew bash
 brew bash-completion
@@ -18,17 +20,32 @@ brew coreutils
 brew cscope
 brew docker
 brew fortune
+brew freetype
 brew git
 brew go
+brew imagemagick
+brew jpeg
 brew libevent
+brew libgpg-error
+brew libksba --force
+brew libpng
+brew libtiff
+brew libtool
+brew libyaml
 brew lua
-brew macvim --with-lua --with-override-system-vim
+brew lzlib
+brew macvim --with-override-system-vim --with-lua
 brew mas
+brew memcached
 brew openssl
+brew pkg-config
+brew postgresql
 brew readline
-brew reattach-to-user-namespace
+brew redis
+brew siege
 brew tmux
 brew xz
+brew zlib
 
 tap homebrew/services
 
