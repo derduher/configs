@@ -138,4 +138,3 @@ let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 
 nnoremap <leader>f :Files<CR>
-set clipboard=unnamed

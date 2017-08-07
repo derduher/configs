@@ -23,6 +23,7 @@ brew cscope
 brew docker
 brew fortune
 brew freetype
+brew fzf
 brew git
 brew go
 brew imagemagick
@@ -59,7 +60,7 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 668208984 GIPHY CAPTURE (3.5)
+appstore 668208984 GIPHY CAPTURE (3.6)
 appstore 409183694 Keynote (7.2)
 appstore 409203825 Numbers (4.2)
 appstore 409201541 Pages (6.2)
