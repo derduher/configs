@@ -6,50 +6,55 @@ cask jet
 
 tap fullscreen/tap
 brew aws-rotate-key
+brew fs-env
 brew aws-ssh
 brew dkv
 
 tap homebrew/completions
 
 tap homebrew/core
-brew autoconf
+brew libtiff
+brew mas
+brew jpeg
+brew xz
+brew go
+brew git
+brew lame
+brew lua
+brew redis
+brew libgpg-error
 brew automake
 brew aws-elasticbeanstalk
-brew awscli
-brew bash
-brew bash-completion
 brew coreutils
-brew cscope
-brew docker
-brew fortune
-brew freetype
-brew fzf
-brew git
-brew go
-brew imagemagick
-brew jpeg
-brew libevent
-brew libgpg-error
-brew libksba
+brew bash
+brew xvid
 brew libpng
-brew libtiff
-brew libtool
-brew libyaml
-brew lua
-brew lzlib
-brew macvim --with-override-system-vim --with-lua
-brew mas
-brew memcached
-brew openssl
-brew pkg-config
 brew postgresql
-brew readline
-brew reattach-to-user-namespace
-brew redis
+brew memcached
+brew fzf
+brew freetype
+brew imagemagick
 brew siege
+brew bash-completion
+brew libtool
 brew tmux
-brew xz
+brew libevent
+brew macvim --with-override-system-vim --with-lua
+brew readline
+brew autoconf
+brew fortune
+brew ffmpeg
+brew lzlib
+brew libyaml
 brew zlib
+brew openssl
+brew libksba
+brew reattach-to-user-namespace
+brew x264
+brew docker
+brew cscope
+brew awscli
+brew pkg-config
 
 tap homebrew/services
 
@@ -60,8 +65,8 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 668208984 GIPHY CAPTURE (3.6)
-appstore 409183694 Keynote (7.2)
-appstore 409203825 Numbers (4.2)
-appstore 409201541 Pages (6.2)
-appstore 497799835 Xcode (8.3.3)
+appstore 668208984 GIPHY CAPTURE (3.7)
+appstore 409183694 Keynote (7.3)
+appstore 409203825 Numbers (4.3)
+appstore 409201541 Pages (6.3)
+appstore 497799835 Xcode (9.0)
