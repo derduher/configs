@@ -130,12 +130,13 @@ let g:UltiSnipsJumpForwardTrigger="<leader>f"
 let g:UltiSnipsJumpBackwardTrigger="<leader>F"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-au BufRead,BufNewFile *.es6 set ft=javascript
-au BufRead,BufNewFile *.nghtml set ft=html
 
 " Nerdcommenter
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 
-nnoremap <leader>f :Files<CR>
+nnoremap <leader>f :GFiles<CR>
 set clipboard=unnamed
+
+autocmd bufwritepost *.js silent !standard --fix %
+set autoread

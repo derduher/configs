@@ -5,7 +5,7 @@ export NVM_DIR="$HOME/.nvm"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,bash_aliases,functions,profile,bower_complete,git-completion.bash,nvm/nvm.sh,extra}; do
+for file in ~/.{path,bash_prompt,exports,bash_aliases,functions,profile,bower_complete,git-completion.bash,nvm/nvm.sh,extra,npm_complete}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
@@ -87,3 +87,4 @@ ulimit -n 4096
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
 fi
+export GPG_TTY=$(tty)

@@ -1,62 +1,99 @@
 
 # tap repositories and their packages
 
-tap caskroom/cask
-cask jet
-
-tap fullscreen/tap
-brew aws-rotate-key
-brew fs-env
-brew aws-ssh
-brew dkv
+tap homebrew/core
+brew adns
+brew augeas
+brew autoconf
+brew automake
+brew aws-elasticbeanstalk
+brew awscli
+brew bash
+brew bash-completion
+brew cairo
+brew certbot
+brew coreutils
+brew cscope
+brew dialog
+brew docker
+brew ffmpeg
+brew fontconfig
+brew fortune
+brew freetype
+brew fzf
+brew gdbm
+brew gettext
+brew git
+brew glib
+brew gmp
+brew gnupg
+brew gnutls
+brew go
+brew icu4c
+brew imagemagick
+brew jpeg
+brew lame
+brew libassuan
+brew libevent
+brew libffi
+brew libgcrypt
+brew libgpg-error
+brew libksba
+brew libpng
+brew libtasn1
+brew libtiff
+brew libtool
+brew libunistring
+brew libusb
+brew libyaml
+brew lua
+brew lzlib
+brew macvim --with-override-system-vim --with-lua
+brew mas
+brew memcached
+brew nettle
+brew node
+brew npth
+brew openssl
+brew p11-kit
+brew pcre
+brew pinentry
+brew pinentry-mac
+brew pixman
+brew pkg-config
+brew pngcrush
+brew postgresql
+brew python
+brew python@2
+brew readline
+brew reattach-to-user-namespace
+brew redis
+brew siege
+brew sqlite
+brew the_silver_searcher
+brew tmux
+brew watchman
+brew x264
+brew xvid
+brew xz
+brew yarn --without-node
+brew zlib
 
 tap homebrew/completions
 
-tap homebrew/core
-brew libtiff
-brew mas
-brew jpeg
-brew xz
-brew go
-brew git
-brew lame
-brew lua
-brew redis
-brew libgpg-error
-brew automake
-brew aws-elasticbeanstalk
-brew coreutils
-brew bash
-brew xvid
-brew libpng
-brew postgresql
-brew memcached
-brew fzf
-brew freetype
-brew imagemagick
-brew siege
-brew bash-completion
-brew libtool
-brew tmux
-brew libevent
-brew macvim --with-override-system-vim --with-lua
-brew readline
-brew autoconf
-brew fortune
-brew ffmpeg
-brew lzlib
-brew libyaml
-brew zlib
-brew openssl
-brew libksba
-brew reattach-to-user-namespace
-brew x264
-brew docker
-brew cscope
-brew awscli
-brew pkg-config
-
 tap homebrew/services
+
+tap caskroom/cask
+cask jet
+cask mono-mdk
+cask openra
+
+tap fullscreen/tap
+brew aws-rotate-key
+brew aws-ssh
+brew dkv
+brew ecs-local
+brew fs-env
 
 tap phrase/brewed
 brew phraseapp
@@ -65,8 +102,8 @@ tap rcmdnk/file
 brew brew-file
 
 # App Store applications
-appstore 668208984 GIPHY CAPTURE (3.7)
-appstore 409183694 Keynote (7.3)
-appstore 409203825 Numbers (4.3)
-appstore 409201541 Pages (6.3)
-appstore 497799835 Xcode (9.0)
+appstore 668208984 GIPHY CAPTURE (3.8)
+appstore 409183694 Keynote (8.0)
+appstore 409203825 Numbers (5.0)
+appstore 409201541 Pages (7.0)
+appstore 497799835 Xcode (9.3)
