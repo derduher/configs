@@ -138,5 +138,9 @@ let g:NERDCommentEmptyLines = 1
 nnoremap <leader>f :GFiles<CR>
 set clipboard=unnamed
 
-autocmd bufwritepost *.js silent !standard --fix %
-set autoread
+let g:ale_sign_column_always = 1
+let g:ale_fixers = {
+\   'javascript': ['standard'],
+\}
+" autocmd bufwritepost *.js silent !standard --fix %
+" set autoread
