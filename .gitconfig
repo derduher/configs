@@ -1,6 +1,7 @@
 [user]
   name = Patrick Weygand
   email = patrick.weygand@gmail.com
+  signingkey = DC74B6608114F2F2
 [credential]
   helper = osxkeychain
 
@@ -38,6 +39,9 @@
 
   added = yellow
   untracked = cyan
+
+[commit]
+  gpgsign = true
 
 [core]
   # Make `git rebase` safer on OS X

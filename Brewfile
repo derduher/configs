@@ -52,7 +52,6 @@ brew macvim --with-override-system-vim --with-lua
 brew mas
 brew memcached
 brew nettle
-brew node
 brew npth
 brew openssl
 brew p11-kit
