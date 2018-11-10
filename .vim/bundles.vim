@@ -26,12 +26,13 @@ Plug 'isRuslan/vim-es6'
 Plug 'editorconfig/editorconfig-vim'
 "Plug 'mustache/vim-mustache-handlebars'
 Plug 'godlygeek/tabular'
-Plug 'digitaltoad/vim-jade'
+" Plug 'digitaltoad/vim-jade'
 " Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-markdown'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'Valloric/YouCompleteMe'
 
 " All of your Plugs must be added before the following line
 call plug#end()

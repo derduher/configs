@@ -26,7 +26,7 @@ undcyn="${b}4;36m\]" # Cyan
 undwht="${b}4;37m\]" # White
 bakblk="${b}40m\]"   # Black - Background
 bakred="${b}41m\]"   # Red
-badgrn="${b}42m\]"   # Green
+badgrn="\033[42m"   # Green
 bakylw="${b}43m\]"   # Yellow
 bakblu="${b}44m\]"   # Blue
 bakpur="${b}45m\]"   # Purple
@@ -85,8 +85,21 @@ function parse_git_dirty() {
 }
 
 function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+	BRANCH=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+	if [ ! "${BRANCH}" == "" ]
+	then
+		STAT=`parse_git_dirty`
+		echo " in ${BRANCH}${STAT}"
+	else
+		echo ""
+	fi
+}
+#124
+function nonzero_return() {
+	# RETVAL=$?
+	# echo "☠ $RETVAL" # || echo "☺"
+	[ $? -ne 0 ] && echo -e "\\033[48;5;124m☠ " || echo -e "\\033[48;5;230m☺"
 }
 
-export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in $txtgrn\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")$bldpur\$(parse_git_branch)\[$WHITE\]\n$smiley "
+export PS1="\`nonzero_return\` \[\033[38;5;237m\w${PURPLE}\`parse_git_branch\` ${ORANGE}`date '+%Y-%m-%d %H:%M:%S'`\[$RESET\]\n"
 export PS2="\[$ORANGE\]→ \[$RESET\]"

@@ -6,12 +6,12 @@ brew adns
 brew augeas
 brew autoconf
 brew automake
-brew aws-elasticbeanstalk
 brew awscli
 brew bash
 brew bash-completion
 brew cairo
 brew certbot
+brew cmake
 brew coreutils
 brew cscope
 brew dialog
@@ -21,6 +21,7 @@ brew fontconfig
 brew fortune
 brew freetype
 brew fzf
+brew gd
 brew gdbm
 brew gettext
 brew git
@@ -29,8 +30,10 @@ brew gmp
 brew gnupg
 brew gnutls
 brew go
+brew graphviz
 brew icu4c
 brew imagemagick
+brew jemalloc
 brew jpeg
 brew lame
 brew libassuan
@@ -41,16 +44,20 @@ brew libgpg-error
 brew libksba
 brew libpng
 brew libtasn1
+brew libtermkey
 brew libtiff
 brew libtool
 brew libunistring
 brew libusb
-brew libyaml
+brew libuv
+brew libvterm
 brew lua
+brew luajit
 brew lzlib
 brew macvim --with-override-system-vim --with-lua
 brew mas
-brew memcached
+brew msgpack
+brew neovim
 brew nettle
 brew npth
 brew openssl
@@ -60,32 +67,24 @@ brew pinentry
 brew pinentry-mac
 brew pixman
 brew pkg-config
-brew pngcrush
-brew postgresql
 brew python
 brew python@2
 brew readline
 brew reattach-to-user-namespace
-brew redis
-brew siege
 brew sqlite
 brew the_silver_searcher
 brew tmux
-brew watchman
+brew unibilium
+brew webp
 brew x264
 brew xvid
 brew xz
-brew yarn --without-node
-brew zlib
 
 tap homebrew/completions
 
 tap homebrew/services
 
 tap caskroom/cask
-cask jet
-cask mono-mdk
-cask openra
 
 tap fullscreen/tap
 brew aws-rotate-key
@@ -94,11 +93,17 @@ brew dkv
 brew ecs-local
 brew fs-env
 
+tap martido/brew-graph
+brew brew-graph
+
 tap phrase/brewed
-brew phraseapp
 
 tap rcmdnk/file
 brew brew-file
+
+# Other Cask applications
+cask mono-mdk
+cask openra
 
 # App Store applications
 appstore 668208984 GIPHY CAPTURE (3.8)

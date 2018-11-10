@@ -7,7 +7,7 @@ function doIt() {
 
   orig=$PWD
 
-  vim -u ~/.vim/bundles.vim +PlugUpdate +qall
+  nvim -u ~/.vim/bundles.vim +PlugUpdate +qall
 
   source ~/.bash_profile
 }
