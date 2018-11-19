@@ -80,8 +80,6 @@ brew x264
 brew xvid
 brew xz
 
-tap homebrew/completions
-
 tap homebrew/services
 
 tap caskroom/cask
@@ -96,8 +94,6 @@ brew fs-env
 tap martido/brew-graph
 brew brew-graph
 
-tap phrase/brewed
-
 tap rcmdnk/file
 brew brew-file
 
@@ -107,7 +103,4 @@ cask openra
 
 # App Store applications
 appstore 668208984 GIPHY CAPTURE (3.8)
-appstore 409183694 Keynote (8.0)
-appstore 409203825 Numbers (5.0)
-appstore 409201541 Pages (7.0)
 appstore 497799835 Xcode (9.3)

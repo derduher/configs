@@ -12,10 +12,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-
-
-
 set hlsearch " highlight searches
 set incsearch " incremental search start showing results before enter is pressed
 set ignorecase " search case insensitively
@@ -36,7 +32,6 @@ set si " smart indent
 set smarttab " use spaces
 set expandtab
 set backspace=indent,eol,start
-
 
 set wildmode=list,longest
 set ml
@@ -60,15 +55,6 @@ let g:is_bash=1
 "let javascript_fold = 1
 "let javascript_enable_domhtmlcss = 1
 
-" Enable syntastic syntax checking
-let g:syntastic_auto_loc_list=1 " error window will be automatically opened when errors are detected, and closed when none are detected.
-" Nothing really does html that well
-let g:syntastic_ignore_files=['.html$', '.hbs$']
-let g:syntastic_javascript_checkers = ['standard']
-
-"let g:javascript_conceal=1
-
-
 set list " show the tabs and line returns
 set listchars=tab:\ \ ,trail:·,eol:¬,nbsp:_,extends:❯,precedes:❮
 set showbreak=↪\  " Character to precede line wraps
@@ -78,41 +64,18 @@ set t_Co=256 " full range of colors for vim
 set background=light
 colorscheme solarized
 
-
-
 " lots of remaps courtesy of https://github.com/8bitDesigner/Dotfiles/blob/master/.vimrc
 
 let mapleader = "," " leader mapping
-nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>s :Gstatus<CR>
-
-" Tab/window shortcuts courtesy Paul Sweeny
-nmap <leader>t :tabnew<CR>
 
 set spr " puts the new window to the right.
 set splitbelow splitright
 " Window navigation mappings
-nmap <leader>h <C-w>h
-nmap <leader>j <C-w>j
-nmap <leader>k <C-w>k
-nmap <leader>l <C-w>l
-
-" esc is too far
-inoremap jk <Esc>
-"inoremap kj <Esc>
-nnoremap <leader>= :Tabularize /=<CR>
-vnoremap <leader>= :Tabularize /=<CR>
-nnoremap <leader>; :Tabularize /^[^:]*\zs:/l0c1l0<CR>
-vnoremap <leader>; :Tabularize /^[^:]*\zs:/l0c1l0<CR>
-
-" I paste frequently
-map <leader>p :set paste!<CR>
 
 " Disables backups - we have version control
 set noswapfile
 set nobackup
 set nowritebackup
-
 
 " Performance
 set ttyfast
@@ -135,7 +98,20 @@ let g:UltiSnipsEditSplit="vertical"
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 
+" I paste frequently
+map <leader>p :set paste!<CR>
+" esc is too far
+inoremap jk <Esc>
+"inoremap kj <Esc>
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>s :Gstatus<CR>
+nmap <leader>t :tabnew<CR>
 nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>g :Ag<CR>
 set clipboard=unnamed
 
 let g:ale_sign_column_always = 1
