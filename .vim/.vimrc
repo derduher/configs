@@ -115,8 +115,9 @@ nnoremap <leader>g :Ag<CR>
 set clipboard=unnamed
 
 let g:ale_sign_column_always = 1
-let g:ale_fixers = {
+let g:ale_linters = {
 \   'javascript': ['standard'],
 \}
+let g:ale_fixers = {'javascript': ['standard']}
 " autocmd bufwritepost *.js silent !standard --fix %
 " set autoread
