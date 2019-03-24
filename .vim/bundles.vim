@@ -29,6 +29,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'digitaltoad/vim-jade'
 " Plug 'SirVer/ultisnips'
 " Plug 'tpope/vim-markdown'
+Plug 'kchmck/vim-coffee-script'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'

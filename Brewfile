@@ -17,6 +17,7 @@ brew cscope
 brew dialog
 brew docker
 brew ffmpeg
+brew flyway
 brew fontconfig
 brew fortune
 brew freetype
@@ -31,10 +32,12 @@ brew gnupg
 brew gnutls
 brew go
 brew graphviz
+brew grep
 brew icu4c
 brew imagemagick
 brew jemalloc
 brew jpeg
+brew jq
 brew lame
 brew libassuan
 brew libevent
@@ -54,12 +57,11 @@ brew libvterm
 brew lua
 brew luajit
 brew lzlib
-brew macvim --with-override-system-vim --with-lua
-brew mas
 brew msgpack
 brew neovim
 brew nettle
 brew npth
+brew oniguruma
 brew openssl
 brew p11-kit
 brew pcre
@@ -84,6 +86,12 @@ tap homebrew/services
 
 tap caskroom/cask
 
+tap caskroom/cask
+
+tap caskroom/versions
+
+tap caskroom/versions
+
 tap fullscreen/tap
 brew aws-rotate-key
 brew aws-ssh
@@ -97,10 +105,11 @@ brew brew-graph
 tap rcmdnk/file
 brew brew-file
 
+# Other Homebrew packages
+brew python3
+
 # Other Cask applications
+cask keybase
 cask mono-mdk
 cask openra
-
-# App Store applications
-appstore 668208984 GIPHY CAPTURE (3.8)
-appstore 497799835 Xcode (9.3)
+cask zulu7

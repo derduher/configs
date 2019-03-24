@@ -20,6 +20,7 @@ set smartcase " overrides ignore case when you type a capital letter.
 set number " show the line number
 "set rnu " relative line line numbers
 
+" set t_Co=256 " full range of colors for vim
 syntax enable " necessary for folding and syntax highlighting
 
 set spell " spell gooder
@@ -61,6 +62,8 @@ set showbreak=↪\  " Character to precede line wraps
 
 " colors!!!
 set t_Co=256 " full range of colors for vim
+" let g:solarized_termtrans = 1
+" let g:solarized_termcolors=256 
 set background=light
 colorscheme solarized
 
