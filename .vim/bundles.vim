@@ -34,6 +34,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
+Plug 'leafgarland/typescript-vim'
 
 " All of your Plugs must be added before the following line
 call plug#end()
