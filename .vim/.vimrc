@@ -115,12 +115,19 @@ nmap <leader>s :Gstatus<CR>
 nmap <leader>t :tabnew<CR>
 nnoremap <leader>f :GFiles<CR>
 nnoremap <leader>g :Ag<CR>
+nnoremap <leader>ad :ALEGoToDefinition<CR>
+nnoremap <leader>adt :ALEGoToDefinitionInTab<CR>
+nnoremap <leader>atd :ALEGoToTypeDefinitionInTab<CR>
+nnoremap <leader>afr :ALEFindReferences<CR>
+nnoremap <leader>am :ALEDetail<CR>
 set clipboard=unnamed
 
 let g:ale_sign_column_always = 1
+let g:ale_set_balloons = 1
 let g:ale_linters = {
 \   'javascript': ['standard'],
 \}
-let g:ale_fixers = {'javascript': ['standard'], 'typescript': ['eslint', 'standard']}
+let g:ale_fixers = {'javascript': ['standard'], 'typescript': ['eslint', 'prettier']}
+let g:ale_fix_on_save = 1
 " autocmd bufwritepost *.js silent !standard --fix %
 " set autoread
