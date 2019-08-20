@@ -120,6 +120,7 @@ nnoremap <leader>adt :ALEGoToDefinitionInTab<CR>
 nnoremap <leader>atd :ALEGoToTypeDefinitionInTab<CR>
 nnoremap <leader>afr :ALEFindReferences<CR>
 nnoremap <leader>am :ALEDetail<CR>
+nnoremap <leader>an :ALENext<CR>
 set clipboard=unnamed
 
 let g:ale_sign_column_always = 1

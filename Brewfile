@@ -11,6 +11,7 @@ brew bash
 brew bash-completion
 brew cairo
 brew certbot
+brew circleci
 brew cmake
 brew coreutils
 brew cscope
@@ -77,16 +78,20 @@ brew sqlite
 brew the_silver_searcher
 brew tmux
 brew unibilium
+brew watchman
 brew webp
 brew x264
 brew xvid
 brew xz
+brew yarn
 
 tap homebrew/services
 
 tap caskroom/cask
+cask keybase
 
 tap caskroom/cask
+cask mono-mdk
 
 tap caskroom/versions
 
@@ -107,9 +112,3 @@ brew brew-file
 
 # Other Homebrew packages
 brew python3
-
-# Other Cask applications
-cask keybase
-cask mono-mdk
-cask openra
-cask zulu7
